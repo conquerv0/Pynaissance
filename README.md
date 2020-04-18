@@ -1,5 +1,5 @@
 # Pynaissance
-- A walk through the frameworks of Python in Finance.
+_ A walk through the frameworks of Python in Finance.
 
 Welcome!This repository explores basic foundation of python programming for finance. Initally developed as an introductory tutorial repository for associates in ETC Capital. 
 
