@@ -1,5 +1,4 @@
 # Basic Libraries for Quantitative Finance
-
 import datetime as dt
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -14,3 +13,6 @@ end = dt.datetime(2019, 12, 31)
 # Initalize a dataframe from a specific source during start and end. 
 df = web.DataReader('TSLA', 'yahoo', start, end)
 print(df.head())
+
+# Convert the dataframe to a csv file. 
+df.to_csv('tsla')
