@@ -1,4 +1,11 @@
-# Basic Import Libaries
+# Basic Libraries for Quantitative Finance
+import datetime as dt
+import matplotlib.pyplot as plt
+import pandas as pd
+import pandas_datareader.data as web
+from matplotlib.finance import candlestick_ohlc
+import matplotlib.dates as mdates
+style.use(ggplot)
 
 # I. Resampling 
 
