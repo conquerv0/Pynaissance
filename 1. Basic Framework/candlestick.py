@@ -7,7 +7,21 @@ from matplotlib.finance import candlestick_ohlc
 import matplotlib.dates as mdates
 style.use(ggplot)
 
-# I. Resampling 
+# 1. Basic setup
+
+# Initalize basic variable. 
+start = dt.datetime(2009, 1, 1)
+end = dt.datetime(2019, 12, 31)
+
+# Initalize a dataframe from a specific source during start and end. 
+df = web.DataReader('GOOGL', 'yahoo', start, end)
+print(df.head())
+
+# Convert the dataframe to a csv file, then use pandas to operates on the local csv file. 
+df.to_csv('googl')
+df = pd.read_csv('googl.csv', parse_dates = True, index_col = 0)
+
+# II. Resampling 
 
 # Make a new dataframe through resample, get average per 10 days period.
 # ohlc = 'Open High Low Close', i.e, market open price, highest price, lowest price, close price of the stock concerned.
