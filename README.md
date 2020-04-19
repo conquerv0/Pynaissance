@@ -9,7 +9,7 @@ Welcome! Initally developed as an introductory tutorial repository for associate
     
 **Content Outline**
 
-    - I. Basic Framework
-        Initalize stock data, dataframe maipulation and basic plotting. 
-    - II. Market Data Manipulation
-
+- I. Basic Framework
+    Initalize stock data, dataframe maipulation and basic plotting. 
+- II. Market Data Manipulation
+    Scraping S&P500 data, merging market data, construct correlation table
