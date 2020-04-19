@@ -8,7 +8,8 @@ Welcome! Initally developed as an introductory tutorial repository for associate
     Note: This repository assumes basic knowledge of python, an understanding of Pandas and basic finance fundamentals is preferred but not necessary.
     
 **Content Outline**
+
     - I. Basic Framework
         Initalize stock data, dataframe maipulation and basic plotting. 
     - II. Market Data Manipulation
-    
+
