@@ -1,5 +1,5 @@
 # Pynaissance
-A walk through the frameworks of Python in Finance.
+A walk through the frameworks of Python in Finance. 
 
 ![Pynance](https://udemycoursedownloader.net/wp-content/uploads/wpdm-cache/1212032_b7e8-900x0.jpg)
 
@@ -16,3 +16,5 @@ Welcome! Initally developed as an introductory tutorial repository for associate
 - III. Machine Learning Application
 
 **Updates to continue**
+
+- Author: Victor Xiao
