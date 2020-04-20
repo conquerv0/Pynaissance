@@ -17,4 +17,4 @@ Welcome! Initally developed as an introductory tutorial repository for associate
 
 **Updates to continue**
 
-- Author: Victor Xiao
+Author: Victor Xiao
