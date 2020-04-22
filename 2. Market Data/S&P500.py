@@ -2,6 +2,10 @@
 import bs4 as bs
 import pickle
 import request
+import datetime as dt
+import os
+import pandas as pd
+import pandas_datareader.data as web
 
 # Some information about beautiful soup: To be updated. 
 def sp500_tickers():
@@ -20,3 +24,27 @@ def sp500_tickers():
   print(tickers)
     
   return tickers
+
+def get_yahoo_data(reload_sp500=False):
+  
+  if reload_sp500:
+    tickers = sp500_tickers()
+  else:
+    with open('sp500tickers.pickle', 'rb') as f:
+      tickers = pickle.load(f)
+  
+  if not os.path.exists('stock_dfs'):
+    os.makedirs('stock_dfs')
+  
+  start = dt.datetime(2008, 1, 1)
+  end = dt.datetime(2019, 12, 31)
+  
+  for ticker in tickers:
+    if not os.path.exists('stock_dfs/{}.csv'.format(ticker)):
+      df = web.DataReader(ticker, 'yahoo', start, end)
+      df.to_csv('stock_dfs/{}.csv'.format(ticker))
+    else:
+      print('Always have {}'.format(ticker))
+      
+ get_yahoo_data()
+      
