@@ -107,6 +107,8 @@ def visualize_data():
   ax.set_yticklabels(row_labels)
   plt.xticks(rotation=90)
   heatmap.set_clim(-1, 1)
+  plt.tight_layout()
+  plt.show()
   
 visualize_data()
   
