@@ -5,7 +5,7 @@ A walk through the frameworks of Python in Finance.
 
 Welcome! Initally developed as an introductory tutorial repository for associates in ETC Capital, this repository explores basic foundation of python programming for finance. The repository is currently in development phase. The finalized version will include a full-fledged integration and utilization of GS-quant API and its relevant datasets and analytics.
 
-    Note: This repository assumes basic knowledge of python, an understanding of Pandas and basic finance fundamentals is preferred but not necessary.
+    Note: This repository assumes basic knowledge of python,including manipulations of basic data structures such as array-based lists and dictionaries, operations on files, etc. An understanding of web data access, the Pandas library, and basic finance fundamentals is preferred but not necessary.
     
 **Content Outline**
 
