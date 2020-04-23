@@ -9,6 +9,7 @@ import pandas_datareader.data as web
 
 # Some information about beautiful soup: To be updated. 
 def sp500_tickers():
+  """This function returns all the stock tickers listed on S&P500."""
   resp = request.get('https://en.wikipedia.org/wiki/List_of_S%26P_500_companies')
   soup = bs.BeautifulSoup(resp.text)
   table = soup.find('table', {'class': 'wikitable sortable'})
@@ -26,7 +27,7 @@ def sp500_tickers():
   return tickers
 
 def get_yahoo_data(reload_sp500=False):
-  
+  """This function parses all data of the S&P500 to csv file from Yahoo. """
   if reload_sp500:
     tickers = sp500_tickers()
   else:
