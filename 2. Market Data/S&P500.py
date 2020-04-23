@@ -50,6 +50,7 @@ def get_yahoo_data(reload_sp500=False):
  get_yahoo_data()
  
 def compile_data():
+  "This function parse csv files into pandas dataframes. "
   with open('sp500tickers.pickle', 'rb') as f:
     tickers = pcikle.load(f)
    
