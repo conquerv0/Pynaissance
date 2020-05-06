@@ -1,0 +1,97 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "CNN-VolatilityAlpha.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyPWmlCv3kbLEvaGZoCyP9RL",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/conquerv0/Pynaissance/blob/master/Framework%20Update%3A%20CNNVolatility_Case\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "L91ndDWgSTVj",
+        "colab_type": "text"
+      },
+      "source": [
+        "# Statistical Arbitrage with Market Volatility Prediction Using CNN\n",
+        "\n",
+        "> by Victor Xiao\n",
+        "\n",
+        "**Introduction**\n",
+        "\n",
+        "In the financial market, numerous algorithms and tools are available for the prcoessing of time series data and its respective prediction problems. This excerpt employs CNN as a measure of generating market dynamic prediction, on the foundation of regressional analysis. We will also horizontally compare with algorithms of the traditional kind. \n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "SGJPeqK4THoD",
+        "colab_type": "text"
+      },
+      "source": [
+        "**Problem Setting**\n",
+        "\n",
+        "> Volatility in the pre-market environment was chosen as a frame of interest and a good measure of respective alpha. If market volatility can be accurately and consistently predicted, opportunity of arbitrage can be captured. \n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "9VKJtz7ngw9p",
+        "colab_type": "text"
+      },
+      "source": [
+        "**Data Preparation**\n",
+        "\n",
+        "The FISE 100 index contract data between January 2016 and March 2020 will be used for the purpose of this repository.\n",
+        "\n",
+        "Since the feature of interest is price volatility, whose is essentially the standard deviations of price. The volatility benchmark we established therefore,is the highest price minus the lowest price at a one-minute period and a moving average window the size of N.\n",
+        "\n",
+        "$Vol=\\frac{\\sum^n_i High_i - Low_i}{n}$\n",
+        "\n",
+        "In principle, when price significantly fluctuates, volatility should increase. To test such relationship, we randomly pick a trading day and confirm it with the respective volatility and market price. \n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "9mbHprk9TTKP",
+        "colab_type": "text"
+      },
+      "source": [
+        "In some period, volatiltiy is fairly significant. The solid line that go across the heat map illustrates the fact that volatility can be consistently high across some time period. In particular:\n",
+        "\n",
+        "*   0100: CFD Trading Starts\n",
+        "*   0700: European Union Stock Pre-market\n",
+        "*   0800: London Stock Exchange Market Open\n",
+        "*   1200: Noon\n",
+        "*   1430: New York Stock Exchange Market Open\n",
+        "*   1630: London Stock Exchange Market Close\n",
+        "\n",
+        "To utilize volatilty in trading, we need it to be high and consistent. Since volatility is mostly high when market open, that is, timestamp 0800. If we used the one-hour pre-market volatility to predict the five minute volatility after market open(in which volatility is the highest within the day), then an intraday trading strategy can be carried out.\n",
+        "\n",
+        "\n"
+      ]
+    }
+  ]
+}
