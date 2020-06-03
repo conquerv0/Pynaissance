@@ -16,5 +16,13 @@ def process_data_for_labels(ticker):
   df.fillna(0, inplace=True)
   return tickers, df
 
-process_data_for_labels('XOM')
-    
+# target function for loss control and momentum purchasing.
+def buy_sell_hold(*args):
+  cols = [c for c in args]
+  requirement = 0.02 
+  for col in cols:
+    if col > requirement:
+      return 1
+    if col < - requirement:
+      return -1 
+   return 0
