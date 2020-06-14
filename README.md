@@ -13,7 +13,9 @@ Welcome! Initally developed as an introductory tutorial repository for associate
     Initalize stock data, dataframe maipulation and basic plotting. 
 - II. Market Data Manipulation
     Scraping S&P500 data, merging market data, construct correlation table
-- III. Machine Learning Application
+- III. Techinical Refinement.
+    Redefining traditional technical indicators with quantitative finance approach.
+- IV. Machine Learning Application
 
 **Updates to continue**
 
