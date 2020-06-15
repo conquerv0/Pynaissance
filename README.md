@@ -15,8 +15,10 @@ Welcome! Initally developed as an introductory tutorial repository for associate
     Scraping S&P500 data, merging market data, construct correlation table
 - III. Techinical Refinement.
     Redefining traditional technical indicators with quantitative finance approach.
-- IV. Machine Learning Application
-
+- IV. Fundamental
+- V. Arbitrage
+- VI. SOTA Quant Model
+- VI. Machine Learning Application
 **Updates to continue**
 
 Author: Victor Xiao
