@@ -10,15 +10,25 @@ Welcome! Initally developed as an introductory tutorial repository for associate
 **Content Outline**
 
 - I. Basic Framework
+
     Initalize stock data, dataframe maipulation and basic plotting. 
+    
 - II. Market Data Manipulation
+
     Scraping S&P500 data, merging market data, construct correlation table
+    
 - III. Techinical Refinement.
+
     Redefining traditional technical indicators with quantitative finance approach.
+    
 - IV. Fundamental
+
 - V. Arbitrage
+
 - VI. SOTA Quant Model
+
 - VI. Machine Learning Application
+
 **Updates to continue**
 
 Author: Victor Xiao
