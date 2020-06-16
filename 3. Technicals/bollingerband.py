@@ -4,6 +4,9 @@ import time
 import pandas as pd
 import numpy as np
 import math
+import matplotlib.pyplot as plt
+%matplotlib inline
+from pandas_datareader import data, wb
 
 start = datetime(2015, 1, 1)
 end = datetime(2019, 5, 31)
@@ -28,3 +31,5 @@ def handle_data(account):
     buylist = []
     selllist = []
 
+def timestamp_to_datetime(timestamp):
+    return datetime.fromtimestamp(float(timestamp))
