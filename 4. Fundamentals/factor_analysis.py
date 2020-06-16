@@ -9,3 +9,4 @@ from quantopian.pipeline.factors import CustomFactor, Returns
 from quantopian.pipeline.classifiers.fundamentals import Sector  
 from quantopian.pipeline.filters import QTradableStocksUS
 from time import time
+
