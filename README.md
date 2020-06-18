@@ -3,7 +3,7 @@ A walk through the frameworks of Python in Finance.
 
 ![Pynance](https://udemycoursedownloader.net/wp-content/uploads/wpdm-cache/1212032_b7e8-900x0.jpg)
 
-Welcome! Initally developed as an introductory tutorial repository for associates in ETC Capital, this repository explores basic foundation of python programming for finance. The repository is currently in development phase. The finalized version will include a full-fledged integration and utilization of Quantopian, GS-Quant and WRDS API and their relevant datasets and analytics.
+Welcome! Initally developed as an introductory tutorial repository for associates in ETC Capital, the first three sections of this repository explore the basic foundation of python programming for finance. The repository is currently in development phase. The subseqent sections are much more rigourous in nature as it surveys the state of the art quantitative finance practices and industry level applications. The finalized version will include a full-fledged integration and utilization of Quantopian, GS-Quant and WRDS API and their relevant datasets and analytics.
     
 **Content Outline**
 
