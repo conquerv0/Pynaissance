@@ -74,3 +74,24 @@ df['Bollinger High'] = rolling_u + (rolling_std*n_std)
 
 df[['close', 'Bollinger High', 'Bollinger Low']].plot()
 
+
+# Strategy Implementation.
+
+df['Position']= None # define a new column for the asset positions.
+
+# Set asset positons through the following binary rule. Note this involves 
+# the idea of pair trading, which we will discuss later.
+
+open = True
+for i in range(len(df)):
+  row = df.iloc[i]
+  last_row = df.iloc[i-1]
+  
+  if open and row['close'] < row['Bollinger Low'] and last_row['close'] > last_row['Bollinger Low']:
+    df.iloc[i, df.columns.get_loc('Position')] = 1
+    open = False
+   
+  if not open and row['close'] > row['Bollinger High'] and last_row['close'] < last_row['Bollinger High']:
+    df.iloc[i, df.columns.get_loc('Position')] = -1
+  
+  df.dropna(subset=['Position'])
