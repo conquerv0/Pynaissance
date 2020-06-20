@@ -37,3 +37,69 @@ Such, a Security Market Line formed to represent how individual securities are p
 
 - Quality: Another factor that tracks core ratio in fundamental analysis. As quality is defined by low debt, stable earnings, consistent asset growth, and strong corporate governance. Common financial metrics such as return to equity, debt to equity and earnings variability can be used to track quality factor. 
 
+**IV. Factor Model**
+
+Rates of return are related to factors.
+
+Single-factor Model：
+
+![SML Equation](https://latex.codecogs.com/svg.latex?R_i=\alpha_i+\beta_if+e_i)
+
+Where：
+
+![SML Equation](https://latex.codecogs.com/svg.latex?Ri) is the rates of return on i asset
+
+![SML Equation](https://latex.codecogs.com/svg.latex?\alpha_i) and ![SML Equation](https://latex.codecogs.com/svg.latex?\beta_i) are constant, ![SML Equation](https://latex.codecogs.com/svg.latex?\beta_i) is the factor loading
+
+![SML Equation](https://latex.codecogs.com/svg.latex?f) is a random factor in one factor model
+
+![SML Equation](https://latex.codecogs.com/svg.latex?e_i) is a random error with ![SML Equation](https://latex.codecogs.com/svg.latex?E[e_i]=0)
+
+单因子模型中，证券的超额收益只受单一因素的影响，例如CAPM。而因子需要是所有证券的共同因子，例如CAPM中的因子为market premium。
+
+Multi-factor Model:
+
+![SML Equation](https://latex.codecogs.com/svg.latex?R_i=\alpha_i+\sum_j^n\beta_i_jf_j+e_i)
+
+同理，在多因子模型中，证券的超额收益受多个因子影响，但不同因子直接需满足条件：
+
+- Factors are uncorrelated
+
+- Error terms on any two asset are uncorrelated
+
+- Error term is uncorrelated with any factor
+
+Possible factors:
+
+- External Factors: GDP, PPI, CPI, ...
+
+- Extracted Factors: Market Portfolio, Industry Averages, ...
+
+
+**V. Fama & French Three-Factor Model (1993, 1996)**
+
+![SML Equation](https://latex.codecogs.com/svg.latex?R_i_t-R_f_t=\alpha_i+\beta_i_M(R_M_t-R_f_t)+\beta_i_sSMB_t+\beta_i_hHML_t+e_i_t)
+
+Where：
+
+SMB is "Small Minus Big" size risk 市值因子
+
+HML is "High Minus Low" value risk 账面市值比（B/M）因子
+
+**VI. Carhart Four-Factor Model (1997)**
+
+![SML Equation](https://latex.codecogs.com/svg.latex?R_i_t-R_f_t=\alpha_i+\beta_i_M(R_M_t-R_f_t)+\beta_i_sSMB_t+\beta_i_hHML_t+\beta_i_uUMD_t+e_i_t)
+
+Where:
+
+UMD is "Up Minus Down" momentum risk 动量因子
+
+**VII. Fama & French Five-Factor Model (2015,2016)**
+
+![SML Equation](https://latex.codecogs.com/svg.latex?R_i_t-R_f_t=\alpha_i+\beta_i_M(R_M_t-R_f_t)+\beta_i_sSMB_t+\beta_i_hHML_t+\beta_i_rRMW_t+\beta_i_cCMA_t+e_i_t)
+
+Where:
+
+RMW is "Robust Minus Weak" operating profitablity risk 盈利水平因子
+
+CMA is "Conservative Minus Aggressive" investment risk 投资水平因子
