@@ -27,4 +27,27 @@ long_window
 def handle_data(account): 
     
     all_close = account.get_attribute_history('closePrice', longest_history)
-  
+    long = []
+    short = []
+    
+    for stk in universe[stock]:
+        price = all_close[stk]
+        if price is None:
+            continue
+        try:
+            # Use ta-lib to calculate MACD
+            macd_tmp = talib.MACD(prices, fastperiod=short_window, slowperiod=long_window)
+            DIF = macd_tmp[0]
+            DEA = macd_tmp[1]
+            MACD = macd_tmp[2]
+        except:
+            continue
+        
+        # Determine what signal MACD provides
+        if MACD[-1] > 0 and MACD[-4] < 0:
+            long.append(stk)
+        elif MACD[-1] < 0 and MACD[-4] > 0:
+            short.append(stk)
+            
+        # Rebalance the current holding.
+        
