@@ -50,4 +50,19 @@ def handle_data(account):
             short.append(stk)
             
         # Rebalance the current holding.
+        for stk in account.valid_secpos:
+            if stk in short:
+                order_to(stk, 0)
+            else:
+                hold.append(stk)
         
+        buy_list = hold
+        for stk in long:
+            if stk not in hold:
+                buy_list.append(stk)
+        
+        if len(buy_list) > 0:
+            amount_per_stk = account.referencePortfolioValue / stk_num
+            for stk in buy_list:
+                amount = int(amount_per_stk / account.referencePrice[stk] / 100.0) *100
+                order_to(stk, amount)
