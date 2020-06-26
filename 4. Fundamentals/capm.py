@@ -31,3 +31,20 @@ plt.xlabel('Daily Percent Return')
 plt.legend()
 
 MSFT_results.summary()
+
+# After above summary is obtained, we can use the calculated beta to make predictions of the return using CAPM.
+
+predictions = R_F+ MSFT_beta*(M - R_F) 
+
+predictions.plot()
+R.plot(color='R')
+plt.legend(['Prediction', 'Actual Return'])
+
+plt.xlabel('Time')
+plt.ylabel('Daily Percent Return')
+
+
+
+
+
+
