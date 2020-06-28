@@ -22,12 +22,12 @@
    
    Bollinger Formula and Components:
    
-   - BOLU: MA(TP, n) + m * sd[TP, n], Upper bollinger band.
-   - BOLD: MA(TP, n) - m * sd[TP, n], Lower bollinger band.
-   - MA: Moving average.
-   - TP(Typical price) = (High + Low + Close) / 3
-   - n: Number of days in smoothing period(typically 20)
-   - m: Number of standard deviations
-   - sd[TP, n]: Standard deviation over last n periods of TP. 
-   
-  
+- BOLU: MA(TP, n) + m * sd[TP, n], Upper bollinger band.
+- BOLD: MA(TP, n) - m * sd[TP, n], Lower bollinger band.
+- MA: Moving average.
+- TP(Typical price) = (High + Low + Close) / 3
+- n: Number of days in smoothing period(typically 20)
+- m: Number of standard deviations
+- sd[TP, n]: Standard deviation over last n periods of TP. 
+
+
