@@ -42,5 +42,6 @@ matplotlib
      matplotlib.dates(日期可视化模组) 
      matplotlib.finance(金融相关) 
      candlestick-ohlc(K线图作图) 
+     RUA
  */
  
