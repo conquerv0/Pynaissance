@@ -123,3 +123,14 @@ optimal_std = np.sqrt(results.x.T.dot(np.corrcoef(return_vec).dot(results.x)))
 plt.plot(stds, means, 'o', markersize=2, color='navy')
 plt.xlabel('Risk')
 plt.ylabel('Return')
+
+# Line from the risk-free rate to the optimial portfolio.
+eqn_of_the_line = lambda x : ((optimal_mean - risk_free_rate)/optimal_std)* x + risk_free_rate
+xrange = np.linspace(0. , 1., num=11)
+
+plt.plot(xrange, [eqn_of_the_line(x) for x in xrange], color='red', linestyle='-', linewidth=2)
+
+# Our optimal portfolio
+plt.plot([optimal_std], [optimal_mean], marker='o', markersize=12, color='navy')
+plt.legend(['Portfolios', 'Capital Allocation Line', 'Optimal Portfolio'])
+
