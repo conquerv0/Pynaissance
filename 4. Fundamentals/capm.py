@@ -80,3 +80,34 @@ plt.title('Mean and Standard Deviation of Returns of Randomized Portfolios')
 plt.plot(risks, returns, '-', markersize=3, color='red')
 plt.legend(['Portfolios', 'Efficient Frontier'])
 
+"""
+The line that represents the different combinations of risk-free asset with a portfolio of risky assets is the Capital Allocation Line(CAL). 
+The slope of the CAL is the Sharpe ratio. To maximize sharpe, we find the steepest CAL, which is exactly the CAL that is tangent to the efficient
+frontier.
+"""
+
+def maximize_sharpe_ratio(return_vec, risk_free_ratio):
+  """
+  Find the CAPM optimal portfolio from the efficient frontier by optimizing the Sharpe ratio.
+  """
+  def find_sharpe(weights):
+    means = [np.mean(asset) for asset in return_vec]
+    numerator = sum(weights[m]*means[m] for m in range(len(means))) - risk_Free_rate
+    weight = np.array(weights)
+    denominator = np.sqrt(weights.T.dot(np.corrcoef(return_vec).dot(weights)))
+    return numerator/demominator
+  
+  guess = np.ones(len(return_vec))/len(return_vec)
+  
+  def objective(weights):
+    return find_sharpe(weights)
+  
+  # Setup Equality Constraint
+  cons = ['type':'eq', 'fun': lamda x: np.sum(np.abs(x))-1]
+  
+  # Setup Bounds for Weights
+  bnds = [(0, 1)] * len(return_vec)
+  
+  results = optimize.minimize(objective, guess, constraints=cons, bounds=bnds, method='SLSQP', options=['disp': False])
+  
+  return results
