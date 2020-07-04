@@ -22,3 +22,18 @@ def rand_weights(n):
   """
   k = np.random.rand(n)
   return k / sum(k)
+
+def rand_portfolio(returns):
+  """
+  Returns the mean and standard deviation of returns for a randomized portfolio.
+  """
+  p = np.asmatrix(np.mean(returns, axis=1))
+  w = np.asmatrix(rand_weights(returns.shape[0]))
+  c = np.asmatrix(np.cov(returns))
+  
+  mean = w*p.T
+  sd = np.sqrt(w*c*w.T)
+  
+  if mean > 2:
+    return rand_portfolio(returns)
+  return mean, sd
