@@ -111,3 +111,15 @@ def maximize_sharpe_ratio(return_vec, risk_free_ratio):
   results = optimize.minimize(objective, guess, constraints=cons, bounds=bnds, method='SLSQP', options=['disp': False])
   
   return results
+
+risk_free_rate = np.mean(R_F)
+results = maximize_sharpe_ratio(return_vec, risk_free_rate)
+
+# Applying optimal weights to individual assets for portfolio construction
+optimial_mean = sum(results.x[i]*np.mean(return_vec[i] ) for i in range(len(results.x)))
+optimal_std = np.sqrt(results.x.T.dot(np.corrcoef(return_vec).dot(results.x)))
+
+# Plotting all possible portfolios
+plt.plot(stds, means, 'o', markersize=2, color='navy')
+plt.xlabel('Risk')
+plt.ylabel('Return')
