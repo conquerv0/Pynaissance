@@ -67,3 +67,16 @@ def optimal_portfolio(returns):
   risks = [np.sqrt(blas.dot(x, S*x)) for x in portfolios]
   
   return returns, risks
+
+n_portfolios = 50000
+means, sds = np.column_stack([rand_portfolio(return_vec) for x in range(n_portfolios)])
+returns, risks = optimal_portfolio(return_vec)
+
+plt.plot(stds, means, 'o', markersize=2, color='navy')
+plt.xlabel('Risk')
+plt.ylabel('Return')
+plt.title('Mean and Standard Deviation of Returns of Randomized Portfolios')
+
+plt.plot(risks, returns, '-', markersize=3, color='red')
+plt.legend(['Portfolios', 'Efficient Frontier'])
+
