@@ -38,3 +38,12 @@ plt.plot([cylical_betas[2], cyclical_betas[2]],
         [np.mean(cyclical_returns.iloc[:,2]), 
          line_eqn(cyclical_betas[2])],
         color='grey')
+plt.annotate('Alpha', 
+             xy=(cyclical_betas[2] + 0.05, 
+                 (line_eqn(cyclical_betas[2])-np.mean(cyclical_returns.iloc[:, 2]))/2+np.mean(cylical_returns.iloc[:,2])),
+             xytext=(cyclical_betas[2] + 0.05,
+                 (line_eqn(cyclical_betas[2])-np.mean(cyclical_returns.iloc[:, 2]))/2+np.mean(cylical_returns.iloc[:,2]))
+            )
+plt.xlabel('Beta')
+plt.ylabel('Return')
+
