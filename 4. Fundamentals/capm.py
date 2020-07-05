@@ -1,4 +1,9 @@
 # Basic Setup
+import numpy as np
+import pandas as pd
+import statsmodel.api as sm
+from statsmodels import regression
+import matplotlib.pyplot as plt
 from scipy import optimize
 import cvxopt as opt
 from cvxopt import blas, solvers
