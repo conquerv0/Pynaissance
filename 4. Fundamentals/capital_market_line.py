@@ -18,3 +18,23 @@ plt.plot(xrange, [line_eqn(x) for x in xrange], color='red', linestyle='-', line
 
 plt.plot([1], [np.mean(M)], marker='o', color='navy', markersize=10)
 plt.annotate('Market', xy=(1, np.mean(M)), xytest=(0.9, np.mean(M)+0.00004))
+
+# At this point, we need to compare to see if stocks in more cyclical industries yield higher betas. 
+
+# Non-Cyclical Industry Stocks
+non_cyclical = ['PG', 'DUK', 'PFE']
+non_cyclical_returns = get_pricing(non_cyclical, fields='price', start_date=start_date, end_date=end_date).pct_change()[1:]
+non_cyclical_returns.columns = map(lambda x : x.symbol, non_cyclical_returns.columns)
+
+non_cyclical_betas = [regression.linear_model.OLS(non_cyclical_returns[asset], sm.add_constant(M)).fit().params[1] for asset in non_cyclical]
+
+for asset, beta in zip(cyclical, cyclical_betas):
+  plt.plot([beta], [np.mean(cyclical_returns[asset])], marker='o', color='y', markersize=10)
+  plt.annotate(asset, 
+               xy=(asset, xy=(beta, np.mean(cyclical_returns[asset])), 
+               xytext=(beta + 0.015, np.mean(cyclical_returns[asset]) + 0.00025))
+
+plt.plot([cylical_betas[2], cyclical_betas[2]],
+        [np.mean(cyclical_returns.iloc[:,2]), 
+         line_eqn(cyclical_betas[2])],
+        color='grey')
