@@ -10,6 +10,15 @@ from cvxopt import blas, solvers
 
 risk_free_rate = np.mean(R_F)
 
+"""
+Given the assumption that diversification reduces risk, an optimal portfolio constructed through 
+applying of CAPM typically have higher return and lower risk than any individual asset. Theoretically , all
+investors should be demanding such an optimal portfolio. By this mechanism, a market portfolio can be constructed. 
+
+By CAPM, when a risk-free asset is added to the market portfolio, the Capital Asset Line turns into the Capital Market Line.
+Any asset or portfolio that lies to the right of the CML is inefficient as it contains diversifiable risk. 
+"""
+
 # We have two coordinates that we can use to map the SML(Security Market Line):(0, risk-free rate) and (1, market return)
 
 line_eqn = lambda x : ((np.mean(M) - risk_free_rate) / 1.0)*x + risk_free_rate
@@ -47,3 +56,4 @@ plt.annotate('Alpha',
 plt.xlabel('Beta')
 plt.ylabel('Return')
 
+plt.legend(['Security Market Line'])
