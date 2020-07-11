@@ -9,7 +9,7 @@ Welcome! Initally developed as an introductory tutorial repository for associate
 
 - I. Basic Framework
 
-    Initalize stock data, dataframe maipulation and basic plotting. 
+    Initalize stock data, dataframe maipulation and basic plotting. Some general information about the main package used is included.
     
 - II. Market Data Manipulation
 
@@ -21,7 +21,11 @@ Welcome! Initally developed as an introductory tutorial repository for associate
     
 - IV. Fundamental
 
+    Capital Asset Pricing Theory, Single and multi-factor models, Proprietary Adaptive DCF model
+
 - V. Arbitrage
+
+    Pair trading, Merger arbitrage, Mean reversion strategy
 
 - VI. SOTA Quant Model
 
