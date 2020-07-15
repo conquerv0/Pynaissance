@@ -13,7 +13,7 @@ Welcome! Initally developed as an introductory tutorial repository for associate
     
 - II. Market Data Manipulation
 
-    Scraping S&P500 data, merging market data, construct correlation table
+    Scraping S&P500 data, Asset correlation, linear regression, beta hedging.
     
 - III. Techinical Refinement.
 
