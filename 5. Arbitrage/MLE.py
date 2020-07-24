@@ -71,3 +71,15 @@ plt.legend(['Fitted Distribution PDF', 'Observed Data', ])
 prices = get_pricing('AAPL', fields='price', start_date='2018-01-01', end_date='2019-12-31')
 absolute_returns = np.diff(prices)
 returns = absolute_returns / prices[:-1]
+
+# Using the scipy's fit function to get the mu and sigma 
+mu, std = scipy.stats.norm.fit(returns)
+pdf = scipy.stats.norm.pdf
+x = np.linspace(-1, 1, num= 100)
+h = plt.hist(returns, bins=x, normed='true')
+l = plt.plot(x, pdf(X, loc=mu, scale=std))
+
+# Note that fitting this sample to normal would not work if they do not follow a normal in the
+# first place. Such, Jarque-Bera normality test can be carried out. The hypothesis of normal 
+# distribution will be rejected if the p-value is under a threshold c.
+
