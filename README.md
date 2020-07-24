@@ -19,17 +19,17 @@ Welcome! Initally developed as an introductory tutorial repository for associate
 
     Redefining traditional technical indicators with quantitative finance approach.
     
-- IV. Fundamental
+- IV. Fundamental Pricing Theory
 
     Capital Asset Pricing Theory, Single and multi-factor models, Proprietary Adaptive DCF model
 
-- V. Arbitrage
+- V. Statistical Arbitrage
 
     Pair trading, Merger arbitrage, Mean reversion strategy
 
-- VI. SOTA Quant Model
+- VI. Online Portfolio Selection Algorithms
 
-- VI. Machine Learning Application
+- VI. Machine Learning
 
 **Updates to continue**
 
