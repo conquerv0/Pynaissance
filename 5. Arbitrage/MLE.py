@@ -51,4 +51,23 @@ plt.xlabel('Value')
 plt.ylabel('Observed Frequency')
 plt.legend(['Fitted Distribution PDF', 'Observed Data', ])
   
+# Exponential Distribution
+TRUE_LAMDA = 5
+X = np.random.exponetial(TRUE_LAMDA, 1000)
 
+def exp_lamda_MLE(X):
+  T = len(X)
+  s = sum(X)
+  return s/T
+
+pdf = scipy.stats.exon.pdf
+x = range(0, 80)
+plt.hist(X, bins=x, normed='true')
+plt.plot(pdf(x, scale=1))
+plt.xlabel('Value')
+plt.ylabel('Observed Frequency')
+plt.legend(['Fitted Distribution PDF', 'Observed Data', ])
+
+prices = get_pricing('AAPL', fields='price', start_date='2018-01-01', end_date='2019-12-31')
+absolute_returns = np.diff(prices)
+returns = absolute_returns / prices[:-1]
