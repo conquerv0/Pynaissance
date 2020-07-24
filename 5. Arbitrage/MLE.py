@@ -43,5 +43,12 @@ def normal_sigma_MLE(X):
   sigma_sq = 1.0/ n_obs * sum_sqd
   return math.sqrt(sigma_sq)
 
+pdf = scipy.stats.norm.pdf
+x = np.linespace(0, 80, 80)
+plt.hist(x, bins=x, normed='true')
+plt.plot(pdf(x, loc=mu, scale=std))
+plt.xlabel('Value')
+plt.ylabel('Observed Frequency')
+plt.legend(['Fitted Distribution PDF', 'Observed Data', ])
   
 
