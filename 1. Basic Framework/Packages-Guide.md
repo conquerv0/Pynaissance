@@ -1,19 +1,21 @@
-/* 
-ENG version:
-Here provides some basic information about the packages used to satisfy some of the viewers who may need some assisstance to understanding the function imported and applied in the program.
-datetime
+This module provides some basic information about the packages used to satisfy some of the viewers who may need some assisstance to understanding the function imported and applied in the program.
+
+**datetime**
+
   The python package based on the 'time' package. Can be split into two parts which are Time and Date.
   Time is used for a precise time in a day from hours to miliseconds.
   Date is used for a date in the calendar including years, months and days.
   
-pandas
+**pandas**
+
   Pandas package(Python Data Analysis Library) is a tool based on Numpy package, which is designed for data analysis needs.
   Many convenient functions are include in this package including data pretreatment, data cutting, summary and etc.
   
-  pandas_datareader
+ **pandas_datareader**
     This is one of the sunmodules of the pandas pack, as its name is used for data reading.
     
-matplotlib
+**matplotlib**
+
   Matplotlib package is a widely used pack in math, statistics and other aspects requiring data visualisation
   The functions we applied here are 
     matplotlib.pyplot(basic plotting freamwork) 
@@ -21,7 +23,7 @@ matplotlib
     matplotlib.finance(finance related functions) 
     candlestick-ohlc(candlestick graphics)
     
-conda environment
+**conda environment**
     
     
  简体中文：
