@@ -21,6 +21,7 @@ matplotlib
     matplotlib.finance(finance related functions) 
     candlestick-ohlc(candlestick graphics)
     
+conda environment
     
     
  简体中文：
