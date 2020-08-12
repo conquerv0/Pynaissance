@@ -9,7 +9,8 @@ Welcome! Initally developed as an introductory tutorial repository for associate
 
 - I. Basic Framework
 
-    Initalize stock data, dataframe maipulation and basic plotting. Some general information about the main package used is included.
+    A general introduction to python packages. Basic stock data initialization, dataframe maipulation and basic plotting. 
+    Some general information about the main package used is included.
     
 - II. Market Data Manipulation
 
