@@ -10,7 +10,7 @@ Welcome! Initally developed as an introductory tutorial repository for associate
 - I. Basic Framework
 
     A general introduction to python packages. Basic stock data initialization, dataframe maipulation and basic plotting. 
-    Some general information about the main package used is included.
+    Some in-depth guide about the main package used, such as numpy and pandas, is included.
     
 - II. Market Data Manipulation
 
@@ -26,12 +26,17 @@ Welcome! Initally developed as an introductory tutorial repository for associate
 
 - V. Statistical Arbitrage
 
-    Pair trading, Merger arbitrage, Mean reversion strategy
+    Pair trading, Merger arbitrage, Mean reversion strategy.
 
 - VI. Online Portfolio Selection Algorithms
 
+    Takes the portfolio selection problems in an online(continously upated data) setting. 
+    Benchmark strategy, follow-the-winner, follow-the-loser, pattern-matching algorithms. 
+
 - VI. Machine Learning
 
+    Gradient Descent, Random forest, Support-Vector Machine, AdaBoosting, Convolutionary Neural Network.
+    
 **Updates to continue**
 
 > Note: This repository assumes basic knowledge of python,including manipulations of basic data structures such as array-based lists and dictionaries, operations on files, etc. For the first three sections, an understanding of web data access, the Pandas library, and basic finance fundamentals is preferred but not necessary. However, in the subsequent sections, a deep understanding of financial economic models(various asset pricing model), calculus(including derivatives, multi-integration) time series(stationarity,cointegration, etc.), basic statistical and probability theory is needed.
