@@ -22,7 +22,7 @@ Welcome! Initally developed as an introductory tutorial repository for associate
     
 - IV. Fundamental Pricing Theory
 
-    Capital Asset Pricing Theory, Single and multi-factor models, Proprietary Adaptive DCF model
+    Capital Asset Pricing Theory, Single and multi-factor models, Option-Pricing, Proprietary Adaptive DCF model
 
 - V. Statistical Arbitrage
 
