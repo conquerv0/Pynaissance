@@ -1,5 +1,5 @@
 import numpy as np
-import distance
+from tools import distance
 
 
 class KMeans:
@@ -40,7 +40,7 @@ class KMeans:
         y : shape (n_samples,)
             Predicted cluster label per sample.
         """
-        distances = np.apply_along_axis(distance.euclidean_distance, 1, self.__centers, X).T
+        distances = np.apply_along_axis(distance.euclidean_distance, 1, self.centers, X).T
         return np.argmin(distances, axis=1)
 
     @centers.setter

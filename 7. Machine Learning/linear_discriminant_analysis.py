@@ -1,5 +1,5 @@
 import numpy as np
-import metrics
+from tools import metrics
 
 class LDA:
     def __init__(self, n_components=None):

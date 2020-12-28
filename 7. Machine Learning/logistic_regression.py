@@ -1,7 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import metrics
-import regularizer
+from tools import metrics, regularizer
 import scipy
 
 class LogisticRegressionGradientDescent:

@@ -1,6 +1,6 @@
   
 import numpy as np
-import metrics
+from tools import metrics
 
 class PCA:
     def __init__(self, n_components, whiten=False, method='', visualize=False):
