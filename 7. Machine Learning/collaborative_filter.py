@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 class CollaborativeFiltering:
     def fit(self, X, y, dimension, learning_rate, epochs):
-        '''
+        """
         Parameters
         ----------
         X : shape (n_samples, 2)
@@ -12,11 +12,11 @@ class CollaborativeFiltering:
             Rating
         learning_rate : learning rate
         epochs : The number of epochs
-        '''
+        """
         n_samples = X.shape[0]
         user_id = X[:, 0]
         item_id = X[:, 1]
-        
+
         self.__user_items = np.unique(user_id)
         self.__item_items = np.unique(item_id)
 
@@ -51,7 +51,7 @@ class CollaborativeFiltering:
         plt.show()
 
     def predict(self, X):
-        '''
+        """
         Parameters
         ----------
         X : shape (n_samples, 2)
@@ -60,7 +60,7 @@ class CollaborativeFiltering:
         -------
         y : shape (n_samples,)
             Predicted rating per sample.
-        '''
+        """
         n_samples = X.shape[0]
         user_id = X[:, 0]
         item_id = X[:, 1]
