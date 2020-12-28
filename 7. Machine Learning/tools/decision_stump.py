@@ -28,3 +28,16 @@ class DecisionStump():
        
         for i in range(n_samples):
             self.select_direction(feature_index, X[i, feature_index], X, y, w)
+            
+    def select_features(self, X, y, w):
+        n_features = X.shape[1]
+        for i in range(n_features):
+            self.select_threshold(i, X, y, w)
+            
+    def fit(self, X, y, w):
+        self.feature_index = None
+        self.threshold = None
+        self.direction = None
+        self.min_err_val = np.inf
+        
+        self.select_features(X, y, w)
