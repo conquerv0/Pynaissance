@@ -35,7 +35,7 @@ Welcome! Initally developed as an introductory tutorial repository for associate
 
 - VII. Machine Learning
 
-    Gradient Descent, Random forest, Support-Vector Machine, AdaBoosting, Convolutionary Neural Network.
+    KNN, Gradient Descent, Decision Trees, Random forest, KMeans, Support-Vector Machine, AdaBoost, Convolutionary Neural Network.
     
 - VIII. Backtest
 
