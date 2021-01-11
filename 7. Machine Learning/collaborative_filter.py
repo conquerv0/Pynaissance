@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+
 class CollaborativeFiltering:
     def fit(self, X, y, dimension, learning_rate, epochs):
         """
