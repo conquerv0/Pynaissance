@@ -3,7 +3,7 @@ A walk through the frameworks of Python in Finance.
 
 ![Pynaissance](https://github.com/conquerv0/Pynaissance/blob/master/1.%20Basic%20Framework/PYNAISSANCE.jpg)
 
-Welcome! Initally developed as an introductory tutorial repository for associates in ETC Capital, this repository has became a collection of algorithms, models and guides the author develops in his personal quant's pursuit. the first three sections of this repository explore the basic foundation of python programming for finance. The subseqent sections are much more rigourous in nature as it surveys the state of the art quantitative finance practices and industry level applications, including machine learning algorithms and various statistical methods applied to stock selections, factor mining problems. The repository is currently in development phase. The finalized version will include a full-fledged integration and utilization of Quantopian, GS-Quant and WRDS API and their relevant datasets and analytics.
+Welcome! Initally developed as an introductory tutorial repository for associates in ETC Capital, this repository has became a collection of algorithms, models and guides the author develops in his personal quantitative investment pursuit. the first three sections of this repository explore the basic foundation of python programming for finance. The subseqent sections are much more rigourous in nature as it surveys the state of the art quantitative finance practices and industry level applications, including machine learning algorithms and various statistical methods applied to stock selections, factor mining problems. The repository is currently in development phase. The finalized version will include a full-fledged integration and utilization of Quantopian, GS-Quant and WRDS API and their relevant datasets and analytics.
     
 **Content Outline**
 
@@ -37,7 +37,9 @@ Welcome! Initally developed as an introductory tutorial repository for associate
 
     KNN, Gradient Descent, Decision Trees, Random forest, KMeans, Support-Vector Machine, AdaBoost, Convolutionary Neural Network.
     
-- VIII. Backtest
+- VIII. Backtest Modules
+
+    Userful backtesting framework. Backbones for automated trading system. 
 
 - IX. Kaggle & Leet. 
 
