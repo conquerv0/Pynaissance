@@ -7,7 +7,21 @@ from torch.utils.data import DataLoader
 from torch.utils.data import TensorDataset
 
 def data_parser(filepath):
-  pass
+    dataset = {}
+    
+    # read data from a matlab files. 
+    try: 
+      with h5py.File(filepath, 'r') as f:
+        for k, v in f.items():
+          dataset[k] = np.array(v)
+    except:
+      import scipy.io
+      mat = scipy.io.loadmat(filepath)
+      dataset['x'] = mat['x'].T
+      dataset['Y'] = mat['y'].T
+    
+    print('dataset is loaded into numpy array.')
+    return dataset
 
 def data_preproc(dataset):
   pass
