@@ -63,3 +63,14 @@ for train, test in kf.split(X):
 
 __3. Leave-one-out LOO__
 
+Leave-ont-out method is a special case in cross validation. We assume Dataset D contain some m samples, let k=m, and each subset contain one sample. This means LOO is not subject to random splitting since there only exists one way to split m subset. This means, the model performance evaluated under LOO is vastly similar to the expected training result of the model on dataset D. Such, this evaluation method is considered accurate, despite its apparent flaw: for large dataset, the computational cost of training m model is huge. 
+
+~~~python
+from sklearn.model_selection import LeaveOneOut
+import numpy as np
+
+X = np.random.randint(1, 10, 5)
+kf = LeaveOneOut()
+for train, test in kf.split(X):
+  print(train, '\n', test)
+
