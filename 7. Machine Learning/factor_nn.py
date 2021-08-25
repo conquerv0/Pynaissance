@@ -5,6 +5,7 @@ import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader
 from torch.utils.data import TensorDataset
+from sklearn.preprocessing import MinMaxScaler
 
 """ == Data Preproc Module =="""
 
@@ -26,7 +27,35 @@ def data_parser(filepath):
     return dataset
 
 def data_preproc(dataset):
-  pass
+    """
+    This function preprocesses the datasets for model training.
+    @params
+    datasets:
+    ________
+    @returns
+    x_train, x_test, x_val, y_train, y_val, y_test, time, window
+    """
+    x, y = dataset['x'][:, :], dataset['y'][:,2].reshape(-1, 1)
+    
+    print('Begin preprocessing, removing nan values...')
+    mask = ~np.any(np.isnan(y), axis=1)
+    x = x[mask]
+    y = y[mask]
+    
+    x = x[x[:, 0].argsort()]
+    timestamp = x[:, 0]
+    
+    window = []
+    for i in range(len(timestamp) - 1):
+        if i < len(timestamp) - 1 and timestamp[i] != timestamp[i+1]:
+            window.append(i)
+            
+    x = x[:, 1:]
+    train_n = 813509
+    valid_n = 1097266
+    print('Spliting training and testing dataset')
+    x_train, x_val, x_test = x[:train_n, :], x[train_n;valid_n, :], x[valid_n:, :]
+    y_train, y_val, y_test = y[:train_n, :], y[train_n;valid_n, :], y[valid_n:, :]
 
 """ == Training Module == """
 
@@ -46,6 +75,7 @@ class MLP(nn.Module):
     
 def train(model, device, dataloader, epochs=200)
     optimizer = torch.optim.Adam(model.parameters(), lr=0.005)
+    scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=20, gamma = 0.9)
     loss_func = nn.MSELoss()
     mse, corrs = [], []
     
