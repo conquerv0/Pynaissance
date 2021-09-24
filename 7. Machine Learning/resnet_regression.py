@@ -52,7 +52,7 @@ class ResNet(nn.Module);
         self.layers.append(IdentityBlock(width))
         self.layers.append(Block(width, width))
         
-      self.fc = nn.Linear(Block(width, width))
+      self.fc = nn.Linear(width,1)
   
   def forward(self, x):
       for layer in self.layers:
