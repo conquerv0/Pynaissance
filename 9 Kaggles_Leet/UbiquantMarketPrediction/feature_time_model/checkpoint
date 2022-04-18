@@ -1,0 +1,2 @@
+model_checkpoint_path: "ns_model_with_time_id.tf"
+all_model_checkpoint_paths: "ns_model_with_time_id.tf"
