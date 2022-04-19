@@ -42,7 +42,8 @@ Welcome! Initally developed as an introductory tutorial repository for associate
     Userful backtesting framework. Backbones for automated trading system. 
 
 - IX. Kaggle & Leet. 
-
+    
+    Quant Competition Idea & Solution, Kaggle Problems Check-in.
 **Updates to continue**
 
 > Note: This repository assumes basic knowledge of python,including manipulations of basic data structures such as array-based lists and dictionaries, operations on files, etc. For the first three sections, an understanding of web data access, the Pandas library, and basic finance fundamentals is preferred but not necessary. However, in the subsequent sections, a deep understanding of financial economic models(various asset pricing model), calculus(including derivatives, multi-integration) time series(stationarity,cointegration, etc.), basic statistical and probability theory is needed.
